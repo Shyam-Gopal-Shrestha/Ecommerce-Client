@@ -2,8 +2,8 @@ import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { signupFormFields } from "./signupFormField";
 import CustomInput from "../customInput/customInput";
 import { toast } from "react-toastify";
+import { createUser } from "../../axios/userAxios";
 import useForm from "../../hook/useForm";
-// import { createUser } from "../../axios/userAxios";
 
 const formValidation = (formData) => {
   const { password, confirmPassword } = formData;
@@ -76,7 +76,7 @@ const SignupForm = () => {
           ))}
         </Row>
 
-        <Button variant="primary" className="btn-lg w-100" type="submit">
+        <Button variant="success" className="btn-lg w-100" type="submit">
           Signup
         </Button>
       </Form>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const handleonChange = (e, formData, setFormData) => {
+const handleOnChange = (e, formData, setFormData) => {
   const { name, value, files, type } = e.target;
 
   setFormData({
@@ -9,11 +9,12 @@ const handleonChange = (e, formData, setFormData) => {
     image: type === "file" ? files?.[0] : formData.image,
   });
 };
-const useForm = (initialformData) => {
-  const [formData, setFormData] = useState(initialformData);
+
+const useForm = (initialFormData) => {
+  const [formData, setFormData] = useState(initialFormData);
 
   return {
-    handleonChange: (e) => handleonChange(e, formData, setFormData),
+    handleOnChange: (e) => handleOnChange(e, formData, setFormData),
     setFormData,
     formData,
   };
